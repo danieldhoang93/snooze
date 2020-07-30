@@ -1,5 +1,5 @@
 <template>
-  <q-layout view="lHh Lpr lFf">
+  <q-layout view="lHr Lpr lFf">
     <q-header elevated>
       <q-toolbar>
 
@@ -20,14 +20,20 @@
     <q-drawer
       v-model="rightDrawerOpen"
       side="right"
-      color="red"
       overlay
       :width="350"
       class="rightDrawer">
         <q-list dark>
-        <div class="navPadding">
-          
-        </div>
+          <div class="navPadding">
+            <q-btn
+            class=" absolute-top-right iconPadding smallWindow"
+            flat
+            dense
+            round
+            icon="settings"
+            aria-label="Menu"
+            @click="rightDrawerOpen = !rightDrawerOpen"/>
+          </div>
         
         <q-item
           v-for="link in settingsLinks"
@@ -82,4 +88,18 @@ export default {
   background:rgb(14, 14, 14);
   border-left:2px solid #1D1D1D;
 }
+
+.iconPadding {
+    margin-top:7px;
+    margin-right:12px;
+}
+
+.q-btn.smallWindow {
+      display:all;
+    }
+
+.navPadding {
+      padding: 2em;
+    }
+
 </style>

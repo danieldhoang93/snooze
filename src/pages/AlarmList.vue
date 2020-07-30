@@ -179,4 +179,11 @@ div {
   position:fixed;
   left:48%;
 }
+
+@media screen and (max-width: 600px) {
+  .pageSize {
+    width:100%;
+    
+  }
+}
 </style>

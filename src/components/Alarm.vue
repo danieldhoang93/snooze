@@ -6,21 +6,19 @@
                     flat
                     v-model="alarmTime"
                     class="clock"/>
-
-        
-            
         </div>
+        
         <q-input dark borderless v-model="label" label-color="white" label="Label" class="q-pa-md" dense></q-input>
         <q-input dark borderless v-model="sound" label-color="white" label="Alarm Sound" class="q-pa-md" dense />
         <div class="dayButtons">
             <div>
-                <q-btn unelevated size="md" round dark class="q-mr-xs" :class="sun ?'daySelected':'dayUnselected'" @click="sun = !sun">Su</q-btn>
-                <q-btn unelevated size="md" round dark class="q-mx-xs" :class="mon ?'daySelected':'dayUnselected'" @click="mon = !mon">M</q-btn>
-                <q-btn unelevated size="md" round dark class="q-mx-xs" :class="tue ?'daySelected':'dayUnselected'" @click="tue = !tue">T</q-btn>
-                <q-btn unelevated size="md" round dark class="q-mx-xs" :class="wed ?'daySelected':'dayUnselected'" @click="wed = !wed">W</q-btn>
-                <q-btn unelevated size="md" round dark class="q-mx-xs" :class="thu ?'daySelected':'dayUnselected'" @click="thu = !thu">Th</q-btn>
-                <q-btn unelevated size="md" round dark class="q-mx-xs" :class="fri ?'daySelected':'dayUnselected'" @click="fri = !fri">F</q-btn>
-                <q-btn unelevated size="md" round dark class="q-ml-xs" :class="sat ?'daySelected':'dayUnselected'" @click="sat = !sat">Sa</q-btn>
+                <q-btn unelevated size="sm" round dark class="q-mr-xs" :class="sun ?'daySelected':'dayUnselected'" @click="sun = !sun">Su</q-btn>
+                <q-btn unelevated size="sm" round dark class="q-mx-xs" :class="mon ?'daySelected':'dayUnselected'" @click="mon = !mon">M</q-btn>
+                <q-btn unelevated size="sm" round dark class="q-mx-xs" :class="tue ?'daySelected':'dayUnselected'" @click="tue = !tue">T</q-btn>
+                <q-btn unelevated size="sm" round dark class="q-mx-xs" :class="wed ?'daySelected':'dayUnselected'" @click="wed = !wed">W</q-btn>
+                <q-btn unelevated size="sm" round dark class="q-mx-xs" :class="thu ?'daySelected':'dayUnselected'" @click="thu = !thu">Th</q-btn>
+                <q-btn unelevated size="sm" round dark class="q-mx-xs" :class="fri ?'daySelected':'dayUnselected'" @click="fri = !fri">F</q-btn>
+                <q-btn unelevated size="sm" round dark class="q-ml-xs" :class="sat ?'daySelected':'dayUnselected'" @click="sat = !sat">Sa</q-btn>
             </div>
         </div>
        
@@ -53,7 +51,6 @@ export default {
 <style lang="scss">
 .alarmDetailLayout {
     background: #1D1D1D;
-    height: 92.5%;
 }
 
 .clock {
@@ -79,5 +76,11 @@ export default {
 
 .dayUnselected {
     color:rgb(66, 66, 66);
+}
+
+@media screen and (max-width: 600px) {
+  .clock {
+    width:50px;
+  }
 }
 </style>
