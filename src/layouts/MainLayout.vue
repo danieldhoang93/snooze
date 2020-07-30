@@ -21,7 +21,7 @@
       v-model="rightDrawerOpen"
       side="right"
       overlay
-      :width="350"
+      :width="320"
       class="rightDrawer">
         <q-list dark>
           <div class="navPadding">

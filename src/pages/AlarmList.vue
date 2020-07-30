@@ -36,7 +36,10 @@
         </q-card>
       </q-dialog>
 
-    <q-btn unelevated round color="accent" icon="add" class="addButton" @click="showAlarmDetails()"/>
+    <div>
+      <q-btn unelevated round color="accent" icon="add" class="addButton" @click="showAlarmDetails()"/>
+    </div>
+    
   </q-page>
 </template>
 
@@ -175,9 +178,11 @@ div {
 }
 
 .addButton {
-  top:85vh;
-  position:fixed;
-  left:48%;
+  position: fixed;
+  top: 85vh;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
 }
 
 @media screen and (max-width: 600px) {
